@@ -129,21 +129,47 @@ table{
 display: block;
     font-weight: 800;
     font-size: .9rem;
-    color: #222;
-    margin: 0px 2px 5px 2px; 
+    color: #333;
+    margin: 0px 2px -3px 2px; 
     /* margin-bottom: 10px; */
 
     }
 
 
+    .popPop {
+        /* display: block; */
+        font-style: italic;
+            font-weight: 300;
+            font-size: .7rem;
+            color: #888;
+            margin: 2px 2px 4px 2px; 
+            line-height: .99;
+            /* margin-bottom: 10px; */
+        
+            }
+
+            .popNote {
+                /* display: block; */
+                font-style: italic;
+                    font-weight: 300;
+                    font-size: .7rem;
+                    color: #888;
+                    margin: 7px 2px 4px 2px; 
+              
+                    /* margin-bottom: 10px; */
+                
+                    }
+        
+
 .popName {
 /* 
 font-weight: 400; */
-font-size: .6rem;
-color: #222;
+font-size: .7rem;
+color: #444;
+/* color: red; */
  margin:0;
- margin-top: -7px;
- /* line-height: 90%; */
+ /* margin-top: -3px; */
+ line-height: 120%;
  padding-left: 10px;
 /* color: red; */
 

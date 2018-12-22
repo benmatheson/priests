@@ -15,7 +15,7 @@ console.log(priests)
     });
 
     // var priests = "data/priestGatherGeo.json";
-    var locations = "data/locations.geojson";
+    var locations = "data/locationsPop.geojson";
 
 
     var map1 = new mapboxgl.Map({
@@ -37,7 +37,7 @@ console.log(priests)
     
         center: [-152, 64.4],
         minzoom: 6,
-        zoom: 3.2, 
+        zoom: 3.6, 
         maxzoom: 12
     });
 
@@ -64,13 +64,27 @@ console.log(priests)
             type: "circle",
             source: "locations",
             paint: {
+                // 'circle-radius': {
+                //     // 'base': 7,
+                //     'stops': [[5, 5], [12, 8]]
+                // },
+
+                'circle-stroke-color':   " rgba(201, 95, 18, 0.927)",
+
+                'circle-stroke-width': 1,
+
                 'circle-radius': {
-                    // 'base': 7,
-                    'stops': [[5, 5], [12, 8]]
-                },
+                    property: 'total',
+                    type: 'exponential',
+                    stops: [
+                      [1, 4],
+                      [16, 17]
+                    ]
+                  },
 
                 'circle-color':
-                   'rgba(0,0,0,.7)'
+                //    'rgba(0,0,0,.7)'
+                  " rgba(201, 95, 18, 0.327)"
               
 //        "fill-opacity": .99,
 //        "fill-outline-color": "rgba(255,255,255,.3)",
@@ -107,30 +121,23 @@ console.log(priests)
 
 var cityName =  e.features[0].properties["location_simple"];
 var priestsList = priests.filter(d=> d.location_simple == cityName );
+var priestsOnly = priestsList.filter(d=> d.loc != "NOTES")
 
 var notes = priestsList.filter(d=>d.loc =="NOTES")
 
 console.log(priestsList)
-console.log(notes.length)
-
-    //   var walker =   e.features[0].properties["Walker/Mallott"];
-    //   var dunleavy =   e.features[0].properties["Dunleavy/Meyer"];
-    //   var begich =   e.features[0].properties["Begich/Call"];
-
-    //   var begichPercent = e.features[0].properties["begichPercent"]
-    //   var dunleavyPercent = e.features[0].properties["dunleavyPercent"]
-    //   var walkerPercent = e.features[0].properties["walkerPercent"]
-
-
-    //   console.log(walker)
-
-    // priestsDetails = priestsList.map((d,i)=>  )
+console.log("NOTES LENG"+notes.length)
+const pop = e.features[0].properties.population ;
 
 
 const popTable =  `
 <p class="popPre">${cityName}</p>
+<p class="popPop">Population: ${pop.toLocaleString()}</p>
 
-${priestsList.map((d,i)=>`<p class="popName">${d.priests}</p>`  ).join('')}
+${priestsOnly.map((d,i)=>`<p class="popName">${d.priests}</p>`  ).join('')}
+${notes.length > 0?`<p class="popPop popNote">Note: ${notes[0].priests}</p>`: ``}
+
+
 `
 
 
