@@ -106,6 +106,36 @@ margin:0 auto;
 } */
 
 
+
+.title {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+
+}
+.header {
+
+font-family: sans-serif;
+font-weight: 600;
+
+color: #444;
+line-height: 105%; 
+margin-bottom: -15px;
+}
+
+
+.subheader {
+
+font-family: sans-serif;
+font-weight: 300;
+color: #444;
+
+font-style: italic;
+
+
+}
 .map {
 
     width: 100%;

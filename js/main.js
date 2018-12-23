@@ -69,7 +69,7 @@ console.log(priests)
                 //     'stops': [[5, 5], [12, 8]]
                 // },
 
-                'circle-stroke-color':   " rgba(201, 95, 18, 0.927)",
+                'circle-stroke-color':   "rgba(222,45,38,1)",
 
                 'circle-stroke-width': 1,
 
@@ -84,7 +84,8 @@ console.log(priests)
 
                 'circle-color':
                 //    'rgba(0,0,0,.7)'
-                  " rgba(201, 95, 18, 0.327)"
+                //   " rgba(201, 95, 18, 0.327)"
+                "rgba(222,45,38,.5)"
               
 //        "fill-opacity": .99,
 //        "fill-outline-color": "rgba(255,255,255,.3)",
