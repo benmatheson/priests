@@ -1,33 +1,27 @@
 {
-  "name": "akgen1",
+  "name": "priests",
   "version": "1.0.0",
-  "description": "akgen1 description",
-  "main": "main.js",
+  "description": "",
+  "main": "index.js",
   "directories": {
     "doc": "doc"
   },
   "scripts": {
-    "babel": "babel --presets env js/main.js -o build/main.bundle.js",
-    "babelFish": "babel --presets env js/mainFish.js -o build/mainFish.bundle.js",
-    "babelRep": "babel --presets env js/mainRep.js -o build/mainRep.bundle.js",
-    "babelB": "browserify --presets env build/main.bundle.js -o build/main.bundle1.js",
-    "start": "python -m SimpleHTTPServer 1337"
+    "babel": "babel --presets env js/main.js -o build/main.bundle.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benmatheson/akGen1.git"
+    "url": "git+https://github.com/benmatheson/priests.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/benmatheson/akGen1/issues"
+    "url": "https://github.com/benmatheson/priests/issues"
   },
-  "homepage": "https://github.com/benmatheson/akGen1#readme",
+  "homepage": "https://github.com/benmatheson/priests#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^10.0.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
   }
 }

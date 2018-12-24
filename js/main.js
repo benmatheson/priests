@@ -132,7 +132,7 @@ const pop = e.features[0].properties.population ;
 
 
 const popTable =  `
-<p class="popPre">${cityName}</p>
+<p class="popPre">${cityName == `Barrow (Utqiagvik)`? `Utqiagvik (Barrow)`: cityName}</p>
 <p class="popPop">Population: ${pop.toLocaleString()}</p>
 
 ${priestsOnly.map((d,i)=>`<p class="popName">${d.priests}</p>`  ).join('')}
