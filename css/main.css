@@ -112,7 +112,7 @@ margin:0 auto;
     position: absolute;
     top: 20px;
     left: 20px;
-    max-width: 90%;
+    max-width: 50%;
 
 
 }
@@ -132,7 +132,7 @@ margin-bottom: -15px;
 font-family: sans-serif;
 font-weight: 300;
 color: #444;
-
+font-size: .92rem;
 font-style: italic;
 
 
@@ -353,8 +353,17 @@ max-width: 300px;
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 700px) {
+
+
+
+.title{
+
+    max-width: 98%;
+
+}
+
+
 }
 
 @media print,
